@@ -31,7 +31,7 @@ https = "https://"
 # Use REQUESTS module to request access and optin the OAUTH2 authorization token
 grant_request = { 'grant_type':'client_credentials' }
 oauth_url = '/learn/api/public/v1/oauth2/token'
-prox = { 'https': 'https://polaris.wccnet.edu:3128', 'http':'http://polaris.wccnet.edu:3128' }
+prox = { 'https': 'https://yourproxy.wccnet.edu:3128', 'http':'http://yourproxy.wccnet.edu:3128' }
 
 # Path variables for building the API URL endpoint
 crs_Path = '/learn/api/public/v1/courses'
