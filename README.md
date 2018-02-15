@@ -1,4 +1,4 @@
-# bbapi-course-membership
+# bbapi-course-membership.py
 Command Line python script using API calls to create/delete/modify Blackboard Course enrollments
 This script uses several python modules to accomplish sending BB Blackboard API requests to a BB SaaS/MH instance
 It uses the Requests module for the HTTP/HTTPS connection to the API endpoints on the BB instances
