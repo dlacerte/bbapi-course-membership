@@ -60,6 +60,7 @@ STATUS_CODE: 204
 
 4) Purge ALL enrollments from a course: 
 ./bbapi-course-membership -t STAGE purge  CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18
+
 JSON string =  {}
 myURL =  https://wccnet-stage.blackboard.com/learn/api/public/v1/courses/courseId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users
 Deleted User _9514422_1 from Course _72172_1
@@ -67,6 +68,7 @@ Deleted User _26297040_1 from Course _72172_1
 
 5) Modify an enrollment record in a course to make a USERID Unavailable
 ./bbapi-course-membership -t STAGE update CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18 jllacerte -a No
+
 JSON string =  {"availability": {"available": "No"}}
 MY URL =  https://wccnet-stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users/userName:jllacerte
 STATUS_CODE: 200
