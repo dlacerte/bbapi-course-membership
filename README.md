@@ -16,7 +16,7 @@ My development environment at WCC is a RHEL 7 server running Python 2.7 and a Mo
 I was inspried to create this script (and others) after seeing Mark Kauffman https://github.com/mark-b-kauffman present a BB API demo 
 at BB WORLD DevCon in New Orleans 2017
 
-Here are some expmaples showing how I use this script as a BB/LMS admin: 
+Here are some examaples showing how I use this script as a BB/LMS admin: 
 
 1a) My HELP menu/description: 
 ./bbapi-course-membership --help
