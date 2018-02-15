@@ -47,7 +47,7 @@ RESULTS:  {u'created': u'2018-02-15T18:09:03.696Z', u'courseId': u'_72172_1', u'
 2) List all enriollments for a course: 
 ./bbapi-course-membership -t STAGE list CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18
 JSON string =  {}
-https://wccnet-stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users
+https://stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users
 {u'created': u'2018-02-15T18:11:29.845Z', u'courseId': u'_72172_1', u'userId': u'_9514422_1', u'dataSourceId': u'_2_1', u'courseRoleId': u'Grader', u'availability': {u'available': u'Yes'}}
 {u'created': u'2018-02-15T18:09:03.696Z', u'courseId': u'_72172_1', u'userId': u'_26297040_1', u'dataSourceId': u'_2_1', u'courseRoleId': u'Instructor', u'availability': {u'available': u'Yes'}}
 {u'created': u'2018-02-15T18:10:48.560Z', u'courseId': u'_72172_1', u'userId': u'_26297409_1', u'dataSourceId': u'_2_1', u'courseRoleId': u'Student', u'availability': {u'available': u'Yes'}}
@@ -55,19 +55,19 @@ https://wccnet-stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-C
 3) Delete/un-enroll one USER from the course: 
 ./bbapi-course-membership -t STAGE delete  CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18  dlacerte_admin
 JSON string =  {}
-MY URL =  https://wccnet-stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users/userName:dlacerte_admin
+MY URL =  https://stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users/userName:dlacerte_admin
 STATUS_CODE: 204
 
 4) Purge ALL enrollments from a course: 
 ./bbapi-course-membership -t STAGE purge  CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18
 JSON string =  {}
-myURL =  https://wccnet-stage.blackboard.com/learn/api/public/v1/courses/courseId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users
+myURL =  https://stage.blackboard.com/learn/api/public/v1/courses/courseId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users
 Deleted User _9514422_1 from Course _72172_1
 Deleted User _26297040_1 from Course _72172_1
 
 5) Modify an enrollment record in a course to make a USERID Unavailable
 ./bbapi-course-membership -t STAGE update CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18 jllacerte -a No
 JSON string =  {"availability": {"available": "No"}}
-MY URL =  https://wccnet-stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users/userName:jllacerte
+MY URL =  https://stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users/userName:jllacerte
 STATUS_CODE: 200
 
