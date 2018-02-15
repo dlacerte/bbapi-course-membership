@@ -20,6 +20,7 @@ Here are some examaples showing how I use this script as a BB/LMS admin:
 
 1a) My HELP menu/description: 
 ./bbapi-course-membership --help
+
 usage: bbapi-course-membership [-h] [-t TARGET]
                                {purge,create,list,update,delete} ...
 Process some command line Arguments
