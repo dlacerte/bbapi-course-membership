@@ -19,6 +19,7 @@ at BB WORLD DevCon in New Orleans 2017
 Here are some examaples showing how I use this script as a BB/LMS admin: 
 
 1a) My HELP menu/description: 
+
 ./bbapi-course-membership --help
 
 usage: bbapi-course-membership [-h] [-t TARGET]
@@ -39,14 +40,18 @@ optional arguments:
                         -t TARGET_BB_INSTANCE: DEV2, PROD, SAAS, SAASTEST
 
 1) Add/Create a new user enrollment in a course as an Instructor: 
+
 ./bbapi-course-membership -t STAGE create CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18 dlacerte -a Yes -r Instructor
+
 JSON string =  {"courseRoleId": "Instructor", "availability": {"available": "Yes"}}
 STATUS_CODE: 201
 STATUS_CODE: 201
 RESULTS:  {u'created': u'2018-02-15T18:09:03.696Z', u'courseId': u'_72172_1', u'userId': u'_26297040_1', u'dataSourceId': u'_2_1', u'courseRoleId': u'Instructor', u'availability': {u'available': u'Yes'}}
 
-2) List all enriollments for a course: 
+2) List all enrollments for a course: 
+
 ./bbapi-course-membership -t STAGE list CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18
+
 JSON string =  {}
 https://stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users
 {u'created': u'2018-02-15T18:11:29.845Z', u'courseId': u'_72172_1', u'userId': u'_9514422_1', u'dataSourceId': u'_2_1', u'courseRoleId': u'Grader', u'availability': {u'available': u'Yes'}}
@@ -54,20 +59,26 @@ https://stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-N
 {u'created': u'2018-02-15T18:10:48.560Z', u'courseId': u'_72172_1', u'userId': u'_26297409_1', u'dataSourceId': u'_2_1', u'courseRoleId': u'Student', u'availability': {u'available': u'Yes'}}
 
 3) Delete/un-enroll one USER from the course: 
+
 ./bbapi-course-membership -t STAGE delete  CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18  dlacerte_admin
+
 JSON string =  {}
 MY URL =  https://stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users/userName:dlacerte_admin
 STATUS_CODE: 204
 
 4) Purge ALL enrollments from a course: 
+
 ./bbapi-course-membership -t STAGE purge  CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18
+
 JSON string =  {}
 myURL =  https://stage.blackboard.com/learn/api/public/v1/courses/courseId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users
 Deleted User _9514422_1 from Course _72172_1
 Deleted User _26297040_1 from Course _72172_1
 
 5) Modify an enrollment record in a course to make a USERID Unavailable
+
 ./bbapi-course-membership -t STAGE update CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18 jllacerte -a No
+
 JSON string =  {"availability": {"available": "No"}}
 MY URL =  https://stage.blackboard.com/learn/api/public/v1/courses/externalId:CRS-CPY-DO-NOT-USE-W_ACC-225-DL-D01-JD-W18/users/userName:jllacerte
 STATUS_CODE: 200
